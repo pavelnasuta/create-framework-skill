@@ -1,0 +1,21 @@
+name: validate
+on:
+  push:
+  pull_request:
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - name: Check required files
+        run: |
+          test -f README.md
+          test -f skill/create-framework/SKILL.md
+          test -f agents/CREATE_METHOD.md
+          python scripts/init_create_project.py --name Demo --idea "AI tool for city services" --out /tmp
+          python scripts/validate_create_project.py /tmp/CREATE_Demo
+      - name: Package
+        run: python scripts/package_skill.py --out /tmp/create-framework-skill.zip

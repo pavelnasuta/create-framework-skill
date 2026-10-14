@@ -1,0 +1,20 @@
+{
+  "skill_name": "create-framework",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "У меня идея Telegram mini app для ментального здоровья мужчин. Проведи через CREATE до MVP и метрик.",
+      "expected_output": "Uses all CREATE stages; includes emotional problem, research assumptions, legal/privacy gate, JTBD, MVP, AARRR, metrics."
+    },
+    {
+      "id": 2,
+      "prompt": "Нужно монетизировать региональный фотобанк с правами, людьми на фото и платными лицензиями. Собери стратегию по CREATE.",
+      "expected_output": "Runs Legal Gate before MVP; creates rights matrix, licensing model, pricing assumptions, GTM and risk register."
+    },
+    {
+      "id": 3,
+      "prompt": "У нас B2B SaaS для автоматизации бухгалтерии. Есть первые метрики, надо понять как масштабировать.",
+      "expected_output": "Uses existing context, runs Tuning before Expansion, ties growth to funnel bottlenecks and LTV/CAC."
+    }
+  ]
+}
